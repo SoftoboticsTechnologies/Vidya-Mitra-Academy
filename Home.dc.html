@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Vidya Mitra Academy | Regular &amp; Correspondence Course Admission Guidance</title>
+<meta name="description" content="Vidya Mitra Academy guides students through D Pharma admission, B Pharmacy correspondence course options, engineering, UG, PG, PUC and SSLC programs. Enquire today." />
+<meta property="og:title" content="Vidya Mitra Academy | Where Every Student Gets a Rebirth of Education" />
+<meta property="og:description" content="Regular and correspondence courses in pharmacy, engineering, arts, commerce and science, with admission guidance for every student." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/Vidya Mitra Academy logo.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="icon" href="assets/Vidya Mitra Academy logo.png" />
+</helmet>
+<dc-import name="SiteHeader" active="home" hint-size="100%,120px"></dc-import>
+
+<section style="position:relative;background:#123E7C;min-height:560px;display:flex;align-items:center;overflow:hidden">
+  <div aria-label="Students on a university campus" role="img" style="position:absolute;inset:0;background-image:linear-gradient(rgba(18,62,124,0.58),rgba(18,62,124,0.76)),url('https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800');background-size:cover;background-position:center;" ></div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:80px 22px;width:100%">
+    <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(242,183,5,0.16);color:#F2B705;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:8px 15px;border-radius:999px">
+      <i class="fa-solid fa-graduation-cap"></i>Vidya Mitra Academy
+    </span>
+    <h1 style="font-family:Outfit,sans-serif;font-size:clamp(36px,5.4vw,60px);line-height:1.08;letter-spacing:-0.025em;color:#FFFFFF;margin:22px 0 20px;max-width:16ch;text-wrap:pretty">Your Education. Your Future. Your New Beginning.</h1>
+    <p style="font-size:18.5px;line-height:1.75;color:#D9E4F4;margin:0 0 16px;max-width:56ch;text-wrap:pretty">We provide opportunities and guidance for students who want to continue or restart their education, across regular and correspondence programs in pharmacy, engineering, arts, commerce and science.</p>
+    <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 34px;padding-left:18px;border-left:3px solid #F2B705;max-width:52ch">
+      <span style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:12.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9EB4D8;font-weight:600">Our Mission</span>
+        <span style="font-family:Outfit,sans-serif;font-size:20px;line-height:1.4;color:#F2B705;font-weight:600">We give you rebirth of your education.</span>
+      </span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="Courses.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16.5px;padding:16px 30px;border-radius:9px" style-hover="background:#FFFFFF;color:#123E7C">Explore Courses<i class="fa-solid fa-arrow-right" style="font-size:14px"></i></a>
+      <button type="button" onClick="{{ enquire }}" style="display:inline-flex;align-items:center;gap:10px;background:#F2B705;color:#3D2E00;border:0;cursor:pointer;font-weight:600;font-size:16.5px;padding:16px 30px;border-radius:9px" style-hover="background:#FFFFFF">Enquire Now<i class="fa-regular fa-comment-dots" style="font-size:15px"></i></button>
+    </div>
+  </div>
+</section>
+
+<section style="background:#123E7C;padding:72px 0 0">
+  <div style="max-width:1240px;margin:0 auto;padding:0 22px 52px;display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+    <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.4vw,38px);line-height:1.22;color:#FFFFFF;margin:0;letter-spacing:-0.02em;text-wrap:pretty">Guidance and access to a wide range of regular and correspondence courses</h2>
+    <p style="font-size:17px;line-height:1.75;color:#D2DEEF;margin:0;padding-left:34px;border-left:2px solid #6C8DC2;text-wrap:pretty">Vidya Mitra Academy helps students explore educational opportunities across pharmacy, engineering, undergraduate, postgraduate, pre university and school level programs. We start with where you are today, then work out which academic route is actually open to you.</p>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:0 22px">
+    <div style="display:grid;grid-template-columns:{{ featureCols }};gap:1px;background:#E7EDF4;border-radius:6px;overflow:hidden;box-shadow:0 18px 44px rgba(11,32,68,0.18);transform:translateY(64px)">
+      <div style="background:#FFFFFF;padding:38px 30px 42px">
+        <span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:#EEF3FA;color:#123E7C;font-size:24px;margin-bottom:24px"><i class="fa-solid fa-layer-group"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:20px;color:#123E7C;margin:0 0 14px;line-height:1.3">Wide Range of Courses</h3>
+        <p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B7A87">Pharmacy, engineering, undergraduate, postgraduate, PUC and school level programs in one place.</p>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 30px 42px">
+        <span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:#FBF3DE;color:#8A6606;font-size:24px;margin-bottom:24px"><i class="fa-solid fa-user-graduate"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:20px;color:#123E7C;margin:0 0 14px;line-height:1.3">Guidance for Students</h3>
+        <p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B7A87">Talk to our team about your background and goals before you commit to a program.</p>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 30px 42px">
+        <span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:#EAF3EC;color:#14664A;font-size:24px;margin-bottom:24px"><i class="fa-solid fa-route"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:20px;color:#123E7C;margin:0 0 14px;line-height:1.3">Multiple Education Pathways</h3>
+        <p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B7A87">Regular and correspondence formats so studying can fit around work and family commitments.</p>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 30px 42px">
+        <span style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:#FBF3DE;color:#8A6606;font-size:24px;margin-bottom:24px"><i class="fa-solid fa-hands-holding-child"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:20px;color:#123E7C;margin:0 0 14px;line-height:1.3">Supportive Learning Journey</h3>
+        <p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B7A87">Stay in touch with us through your course, from enrolment questions to your next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F5F8FB;border-bottom:1px solid #E7EEF6">
+  <div style="max-width:1240px;margin:0 auto;padding:144px 22px 80px;display:grid;gap:52px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center">
+    <div style="display:grid;gap:16px">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Students studying together at Vidya Mitra Academy" style="height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #D5E0EE" />
+      <div style="display:grid;gap:16px;grid-template-columns:1fr 1fr">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&amp;fit=crop&amp;w=700&amp;q=82" alt="Pharmacy laboratory practical session" style="height:170px;width:100%;border-radius:14px;object-fit:cover;border:1px solid #EEDFBA" />
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=700&amp;q=82" alt="Graduation ceremony for academy students" style="height:170px;width:100%;border-radius:14px;object-fit:cover;border:1px solid #D5E0EE" />
+      </div>
+    </div>
+    <div>
+      <span style="font-size:13.5px;letter-spacing:0.12em;text-transform:uppercase;color:#8A6606;font-weight:600">About the Academy</span>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.6vw,40px);line-height:1.18;color:#123E7C;margin:14px 0 20px;letter-spacing:-0.02em;text-wrap:pretty">Go beyond a single stream with Vidya Mitra Academy</h2>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 16px">The academy was founded on a simple belief: every student deserves a second chance and a clear path toward their goals, regardless of their starting point. What began as a small guidance centre has grown into a trusted academy offering regular and correspondence courses across pharmacy, engineering, arts, commerce and science.</p>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 28px">Under the leadership of Darshan Kuruvatti, Vidya Mitra Academy has helped students restart their education, switch streams and complete degrees they had left unfinished.</p>
+      <div style="display:grid;gap:12px;margin-bottom:30px">
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-circle-check" style="color:#14664A;margin-top:4px"></i>Student focused guidance, not a sales pitch</span>
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-circle-check" style="color:#14664A;margin-top:4px"></i>Regular and correspondence options side by side</span>
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-circle-check" style="color:#14664A;margin-top:4px"></i>Support through the full admission process</span>
+      </div>
+      <a href="About-Us.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:#123E7C;color:#FFFFFF;font-weight:600;font-size:16px;padding:14px 26px;border-radius:9px" style-hover="background:#14664A;color:#FFFFFF">Know More<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:80px 22px">
+  <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between;margin-bottom:40px">
+    <div>
+      <span style="font-size:13.5px;letter-spacing:0.12em;text-transform:uppercase;color:#8A6606;font-weight:600">Explore Our Programs</span>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.6vw,40px);color:#123E7C;margin:14px 0 10px;letter-spacing:-0.02em">What We Offer</h2>
+      <p style="font-size:17px;color:#5A6B62;margin:0;max-width:88ch;line-height:1.8;text-wrap:pretty">At Vidya Mitra Academy, we provide a wide range of educational programs designed to help students explore diverse academic and career opportunities. Our programs cover Pharmacy, Engineering, Undergraduate, Postgraduate, PUC, SSLC and other educational courses, giving students the flexibility to choose an academic path that suits their goals. Whether you are looking to begin your education, continue your studies, or explore a new career direction, we aim to provide the right guidance and opportunities to help you move forward with confidence. Your education can have a new beginning, and your future can have a new direction.</p>
+    </div>
+    <a href="Courses.dc.html" style="font-weight:600;font-size:16px;display:inline-flex;align-items:center;gap:8px">View all courses<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+  </div>
+  <div style="display:grid;gap:56px">
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigA }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Pharmacy students working in a laboratory" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #D5E0EE" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#EAF3EC;color:#14664A;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-mortar-pestle"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">Pharmacy</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">D.Pharm, B.Pharm and Pharm.D programs for students planning a career in pharmaceutical practice, retail and hospital pharmacy, or industry.</p>
+        <a href="Courses.dc.html#pharmacy" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore Pharmacy<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigB }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Engineering workshop with students" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #EEDFBA;order:{{ imgOrder }}" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#FBF3DE;color:#8A6606;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-gears"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">Engineering</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">Degree and diploma or polytechnic engineering routes, offered in regular and correspondence formats where applicable.</p>
+        <a href="Courses.dc.html#engineering" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore Engineering<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigA }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Undergraduate students in a college library" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #D5E0EE" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#EEF3FA;color:#123E7C;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-book-open"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">Undergraduate</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">B.A., B.Com., B.Sc. and BCA programs across arts, commerce, science and computer applications.</p>
+        <a href="Courses.dc.html#undergraduate" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore Undergraduate<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigB }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Postgraduate student presenting research" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #EEDFBA;order:{{ imgOrder }}" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#EAF3EC;color:#14664A;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-graduation-cap"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">Postgraduate</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">M.A., M.Sc. and MCA programs for graduates who want to specialise or strengthen their qualifications.</p>
+        <a href="Courses.dc.html#postgraduate" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore Postgraduate<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigA }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Pre university students in a classroom" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #D5E0EE" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#FBF3DE;color:#8A6606;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-school"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">PUC</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">Two year pre university programs in Science, Arts and Commerce, the step between school and a degree course.</p>
+        <a href="Courses.dc.html#puc" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore PUC<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+    <div style="display:grid;gap:48px;grid-template-columns:{{ zigB }};align-items:center">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="School students preparing for exams" style="min-height:300px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #EEDFBA;order:{{ imgOrder }}" />
+      <div>
+        <span style="width:48px;height:48px;border-radius:12px;background:#EEF3FA;color:#123E7C;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px"><i class="fa-solid fa-pen-to-square"></i></span>
+        <h3 style="font-family:Outfit,sans-serif;font-size:26px;color:#123E7C;margin:0 0 12px;letter-spacing:-0.01em">SSLC &amp; Other Programs</h3>
+        <p style="margin:0 0 20px;font-size:16.5px;line-height:1.8;color:#5A6B62;max-width:52ch">School level education and further options on request. Contact the academy for the full list of programs available to you.</p>
+        <a href="Courses.dc.html#sslc" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px">Explore SSLC &amp; Other<i class="fa-solid fa-arrow-right" style="font-size:13px"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#123E7C">
+  <div style="max-width:1240px;margin:0 auto;padding:52px 22px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+    <div>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(24px,3vw,32px);color:#FFFFFF;margin:0 0 8px;letter-spacing:-0.01em">Take the Next Step in Your Education</h2>
+      <p style="font-size:17px;color:#BFD0E8;margin:0">Need help choosing a course? Call us now on <a href="tel:9910676270" style="color:#F2B705;font-weight:600">9910676270</a></p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <button type="button" onClick="{{ enquire }}" style="border:0;cursor:pointer;background:#F2B705;color:#3D2E00;font-weight:600;font-size:16.5px;padding:15px 28px;border-radius:9px" style-hover="background:#FFFFFF">Enquire About Admission</button>
+      <a href="Admissions.dc.html" style="border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;font-weight:600;font-size:16.5px;padding:15px 28px;border-radius:9px" style-hover="background:rgba(255,255,255,0.12);color:#FFFFFF">Admission Process</a>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:80px 22px">
+  <div style="display:grid;gap:52px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center">
+    <div>
+      <span style="font-size:13.5px;letter-spacing:0.12em;text-transform:uppercase;color:#8A6606;font-weight:600">Why It Matters</span>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.6vw,40px);color:#123E7C;margin:14px 0 20px;letter-spacing:-0.02em;text-wrap:pretty">Education That Opens New Doors</h2>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 16px">A qualification changes what you are allowed to apply for. It reopens conversations with employers, makes a stream change possible, and turns an unfinished degree into a completed one.</p>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 26px">Students come to Vidya Mitra Academy at very different points in their journey. Some are finishing school, some are returning after a break of several years. The starting point matters less than the decision to begin.</p>
+      <div style="display:grid;gap:14px">
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-star" style="color:#F2B705;margin-top:4px"></i>Continue an education that was interrupted</span>
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-star" style="color:#F2B705;margin-top:4px"></i>Move into a stream that suits your goals</span>
+        <span style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#16211C"><i class="fa-solid fa-star" style="color:#F2B705;margin-top:4px"></i>Study in a format that works alongside your commitments</span>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Student walking into a college campus" style="height:420px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #EEDFBA" />
+  </div>
+</section>
+
+<section id="enquiry" style="background:#F5F8FB;border-top:1px solid #E7EEF6;border-bottom:1px solid #E7EEF6">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 22px;display:grid;gap:52px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+    <div>
+      <span style="font-size:13.5px;letter-spacing:0.12em;text-transform:uppercase;color:#8A6606;font-weight:600">Fill This Form</span>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.6vw,40px);color:#123E7C;margin:14px 0 18px;letter-spacing:-0.02em;text-wrap:pretty">Do you have a question for us?</h2>
+      <p style="font-size:17px;line-height:1.8;color:#5A6B62;margin:0 0 30px;max-width:52ch">Fill in the form and our team will respond with guidance on the programs that match your interest.</p>
+      <div style="display:grid;gap:16px;font-size:16.5px">
+        <span style="display:flex;gap:14px;align-items:center"><i class="fa-solid fa-phone" style="color:#123E7C;width:18px"></i><span><a href="tel:9910676270">9910676270</a>, <a href="tel:8123274426">8123274426</a></span></span>
+        <span style="display:flex;gap:14px;align-items:center"><i class="fa-brands fa-whatsapp" style="color:#25D366;width:18px;font-size:19px"></i><span><a href="https://wa.me/918123274426" target="_blank" rel="noopener">8123274426</a>, <a href="https://wa.me/919916067627" target="_blank" rel="noopener">9916067627</a></span></span>
+        <span style="display:flex;gap:14px;align-items:center"><i class="fa-solid fa-envelope" style="color:#123E7C;width:18px"></i><a href="mailto:skbremedy@gmail.com">skbremedy@gmail.com</a></span>
+      </div>
+    </div>
+    <form onSubmit="{{ submit }}" style="display:grid;gap:14px;background:#FFFFFF;border:1px solid #E4EDE7;border-radius:16px;padding:30px;box-shadow:0 10px 30px rgba(18,62,124,0.06)">
+      <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Name
+        <input name="name" required="required" placeholder="Your full name" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C" />
+      </label>
+      <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Phone Number
+        <input name="phone" required="required" placeholder="10 digit mobile number" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C" />
+      </label>
+      <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Email
+        <input name="email" type="email" placeholder="you@example.com" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C" />
+      </label>
+      <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Course Interested In
+        <select name="course" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C">
+          <option>Pharmacy</option>
+          <option>Engineering</option>
+          <option>Undergraduate</option>
+          <option>Postgraduate</option>
+          <option>PUC</option>
+          <option>SSLC and other programs</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Message
+        <textarea name="message" rows="4" placeholder="Tell us briefly about your education background" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C;resize:vertical"></textarea>
+      </label>
+      <button type="submit" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16px;padding:14px;border-radius:8px" style-hover="background:#123E7C">Send Enquiry</button>
+    </form>
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:80px 22px">
+  <h2 style="font-family:Outfit,sans-serif;font-size:clamp(27px,3.6vw,40px);color:#123E7C;margin:0 0 10px;letter-spacing:-0.02em">What Students Say</h2>
+  <p style="font-size:15px;color:#8A9A91;margin:0 0 40px;font-style:italic">Placeholder testimonials for layout purposes. Replace with real student feedback before the site goes live.</p>
+  <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:16px;padding:30px">
+      <i class="fa-solid fa-quote-left" style="color:#F2B705;font-size:22px"></i>
+      <p style="font-size:16px;line-height:1.75;color:#3E4F47;margin:16px 0 22px">Placeholder testimonial. A short note from a student about the guidance they received when choosing a course.</p>
+      <span style="display:flex;align-items:center;gap:12px">
+        <span style="width:42px;height:42px;border-radius:50%;background:#EEF3FA;color:#123E7C;display:flex;align-items:center;justify-content:center;font-weight:600">S</span>
+        <span style="display:flex;flex-direction:column"><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:15.5px">Student Name</strong><span style="font-size:13.5px;color:#8A9A91">Course name</span></span>
+      </span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:16px;padding:30px">
+      <i class="fa-solid fa-quote-left" style="color:#F2B705;font-size:22px"></i>
+      <p style="font-size:16px;line-height:1.75;color:#3E4F47;margin:16px 0 22px">Placeholder testimonial. A short note about completing a course through a correspondence program while working.</p>
+      <span style="display:flex;align-items:center;gap:12px">
+        <span style="width:42px;height:42px;border-radius:50%;background:#FBF3DE;color:#8A6606;display:flex;align-items:center;justify-content:center;font-weight:600">S</span>
+        <span style="display:flex;flex-direction:column"><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:15.5px">Student Name</strong><span style="font-size:13.5px;color:#8A9A91">Course name</span></span>
+      </span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:16px;padding:30px">
+      <i class="fa-solid fa-quote-left" style="color:#F2B705;font-size:22px"></i>
+      <p style="font-size:16px;line-height:1.75;color:#3E4F47;margin:16px 0 22px">Placeholder testimonial. A short note about restarting education after a gap of a few years.</p>
+      <span style="display:flex;align-items:center;gap:12px">
+        <span style="width:42px;height:42px;border-radius:50%;background:#EAF3EC;color:#14664A;display:flex;align-items:center;justify-content:center;font-weight:600">S</span>
+        <span style="display:flex;flex-direction:column"><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:15.5px">Student Name</strong><span style="font-size:13.5px;color:#8A9A91">Course name</span></span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,460px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(p) {
+    super(p);
+    this.state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280 };
+  }
+  componentDidMount() {
+    this._r = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this._r);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); }
+  submit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const g = (k) => (f.elements[k] && f.elements[k].value) || '';
+    const body = ['Name: ' + g('name'), 'Phone: ' + g('phone'), 'Email: ' + g('email'), 'Course Interested In: ' + g('course'), '', 'Message:', g('message')].join('\n');
+    window.location.href = 'mailto:skbremedy@gmail.com?subject=' + encodeURIComponent('Course enquiry from ' + (g('name') || 'website')) + '&body=' + encodeURIComponent(body);
+  }
+  renderVals() {
+    const w = this.state.w;
+    return {
+      featureCols: w >= 1060 ? 'repeat(4,1fr)' : (w >= 620 ? 'repeat(2,1fr)' : '1fr'),
+      zigA: w >= 860 ? '1fr 1fr' : '1fr',
+      zigB: w >= 860 ? '1fr 1fr' : '1fr',
+      imgOrder: w >= 860 ? 2 : 0,
+      enquire: () => window.dispatchEvent(new CustomEvent('vma-open-enquiry')),
+      submit: (e) => this.submit(e)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<style>
+body { margin: 0; font-family: "Source Sans 3", system-ui, sans-serif; color: #16211C; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { color: #14664A; text-decoration: none; }
+a:hover { color: #E3A008; }
+input, textarea, select, button { font-family: inherit; }
+@keyframes vmaFade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+</style>
+</helmet>
+<header style="position:sticky;top:0;z-index:80;background:#FFFFFF;border-bottom:1px solid #E4EDE7;box-shadow:0 1px 14px rgba(18,62,124,0.06)">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1240px;margin:0 auto;padding:12px 22px">
+    <a href="index.html" style="display:flex;align-items:center;flex-shrink:0">
+      <img src="assets/Vidya Mitra Academy logo.png" alt="Vidya Mitra Academy logo" style="height:52px;width:auto;display:block" />
+    </a>
+    <nav ref="{{ navRef }}" style="display:{{ navDisplay }};align-items:center;gap:24px;font-size:15.5px;font-weight:500">
+      <a data-key="home" href="index.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">Home</a>
+      <a data-key="about" href="About-Us.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">About Us</a>
+      <a data-key="courses" href="Courses.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">Courses</a>
+      <a data-key="admissions" href="Admissions.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">Admissions</a>
+      <a data-key="faq" href="FAQ.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">FAQ</a>
+      <a data-key="gallery" href="Gallery.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">Gallery</a>
+      <a data-key="contact" href="Contact-Us.dc.html" style="color:#3E4F47;padding:6px 0;border-bottom:2px solid transparent">Contact Us</a>
+    </nav>
+    <div style="display:{{ actionsDisplay }};align-items:center;gap:12px;flex-shrink:0">
+      <button type="button" onClick="{{ openModal }}" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:15px;padding:12px 22px;border-radius:8px;box-shadow:0 6px 16px rgba(20,102,74,0.22)" style-hover="background:#123E7C">Enquire Now</button>
+    </div>
+    <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="display:{{ burgerDisplay }};align-items:center;justify-content:center;width:44px;height:44px;border-radius:9px;border:1px solid #D8E6DE;background:#FFFFFF;color:#123E7C;font-size:19px;cursor:pointer">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <sc-if value="{{ menuOpen }}">
+    <div style="border-top:1px solid #E4EDE7;background:#FFFFFF;padding:10px 22px 20px;animation:vmaFade .18s ease">
+      <div style="display:flex;flex-direction:column">
+        <a href="index.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">Home</a>
+        <a href="About-Us.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">About Us</a>
+        <a href="Courses.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">Courses</a>
+        <a href="Admissions.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">Admissions</a>
+        <a href="FAQ.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">FAQ</a>
+        <a href="Gallery.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">Gallery</a>
+        <a href="Contact-Us.dc.html" style="padding:13px 2px;border-bottom:1px solid #F0F5F2;color:#16211C;font-weight:500">Contact Us</a>
+      </div>
+      <button type="button" onClick="{{ openModal }}" style="width:100%;margin-top:16px;border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:15px;padding:14px;border-radius:8px">Enquire Now</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{ modalOpen }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;background:rgba(18,62,124,0.55);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:5vh 18px;overflow:auto">
+      <div onClick="{{ stop }}" style="width:100%;max-width:520px;background:#FFFFFF;border-radius:16px;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,0.3);animation:vmaFade .2s ease">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:6px">
+          <h2 style="margin:0;font-family:Outfit,sans-serif;font-size:24px;color:#123E7C">Enquire Now</h2>
+          <button type="button" aria-label="Close" onClick="{{ closeModal }}" style="border:0;background:#F1F6F3;width:34px;height:34px;border-radius:8px;cursor:pointer;color:#3E4F47;font-size:15px"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <p style="margin:0 0 20px;color:#5A6B62;font-size:15px;line-height:1.6">Share your details and the course you are interested in. Our team will get back to you with guidance.</p>
+        <form onSubmit="{{ submit }}" style="display:grid;gap:14px">
+          <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Name
+            <input name="name" required="required" placeholder="Your full name" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;color:#16211C" />
+          </label>
+          <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Phone Number
+            <input name="phone" required="required" placeholder="10 digit mobile number" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;color:#16211C" />
+          </label>
+          <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Email
+            <input name="email" type="email" placeholder="you@example.com" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;color:#16211C" />
+          </label>
+          <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Course Interested In
+            <select name="course" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;color:#16211C;background:#FFFFFF">
+              <option>Pharmacy</option>
+              <option>Engineering</option>
+              <option>Undergraduate</option>
+              <option>Postgraduate</option>
+              <option>PUC</option>
+              <option>SSLC and other programs</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label style="display:grid;gap:6px;font-size:13.5px;font-weight:600;color:#3E4F47">Message
+            <textarea name="message" rows="3" placeholder="Tell us briefly about your education background" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;color:#16211C;resize:vertical"></textarea>
+          </label>
+          <button type="submit" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16px;padding:14px;border-radius:8px;margin-top:2px" style-hover="background:#123E7C">Submit Enquiry</button>
+          <p style="margin:0;font-size:12.5px;color:#8A9A91;text-align:center">Your enquiry opens in your email app addressed to skbremedy@gmail.com</p>
+        </form>
+      </div>
+    </div>
+  </sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:120},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;about&quot;,&quot;courses&quot;,&quot;admissions&quot;,&quot;faq&quot;,&quot;gallery&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(p) {
+    super(p);
+    const m = typeof window !== 'undefined' && window.innerWidth < 1080;
+    this.state = { isMobile: m, menuOpen: false, modalOpen: false };
+    this.navRef = React.createRef();
+  }
+  componentDidMount() {
+    this._r = () => {
+      const m = window.innerWidth < 1080;
+      if (m !== this.state.isMobile) this.setState({ isMobile: m, menuOpen: false });
+    };
+    this._o = () => this.setState({ modalOpen: true, menuOpen: false });
+    window.addEventListener('resize', this._r);
+    window.addEventListener('vma-open-enquiry', this._o);
+    this.markActive();
+  }
+  componentDidUpdate() { this.markActive(); }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._r);
+    window.removeEventListener('vma-open-enquiry', this._o);
+  }
+  markActive() {
+    const n = this.navRef.current;
+    if (!n) return;
+    const a = n.querySelector('[data-key="' + (this.props.active || '') + '"]');
+    if (a) { a.style.color = '#123E7C'; a.style.fontWeight = '600'; a.style.borderBottomColor = '#F2B705'; }
+  }
+  submit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const g = (k) => (f.elements[k] && f.elements[k].value) || '';
+    const body = ['Name: ' + g('name'), 'Phone: ' + g('phone'), 'Email: ' + g('email'), 'Course Interested In: ' + g('course'), '', 'Message:', g('message')].join('\n');
+    window.location.href = 'mailto:skbremedy@gmail.com?subject=' + encodeURIComponent('Course enquiry from ' + (g('name') || 'website')) + '&body=' + encodeURIComponent(body);
+    this.setState({ modalOpen: false });
+  }
+  renderVals() {
+    const m = this.state.isMobile;
+    return {
+      navDisplay: m ? 'none' : 'flex',
+      actionsDisplay: m ? 'none' : 'flex',
+      burgerDisplay: m ? 'flex' : 'none',
+      menuOpen: this.state.menuOpen && m,
+      modalOpen: this.state.modalOpen,
+      navRef: this.navRef,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      openModal: () => this.setState({ modalOpen: true, menuOpen: false }),
+      closeModal: () => this.setState({ modalOpen: false }),
+      stop: (e) => e.stopPropagation(),
+      submit: (e) => this.submit(e)
+    };
+  }
+}
+</script>
+</body>
+</html>

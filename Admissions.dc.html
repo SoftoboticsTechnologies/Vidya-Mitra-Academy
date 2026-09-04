@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Admissions | Vidya Mitra Academy Course Admission Guidance</title>
+<meta name="description" content="Admission guidance at Vidya Mitra Academy. Four simple steps to choose a course, contact our team, understand requirements and complete your admission." />
+<meta property="og:title" content="Admissions | Vidya Mitra Academy" />
+<meta property="og:description" content="Guidance through choosing a course and completing the admission process." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/Vidya Mitra Academy logo.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="assets/Vidya Mitra Academy logo.png" />
+</helmet>
+<dc-import name="SiteHeader" active="admissions" hint-size="100%,90px"></dc-import>
+
+<section style="background:#F3F8F5;border-bottom:1px solid #EAF1EC">
+  <div style="max-width:1240px;margin:0 auto;padding:54px 22px 58px;display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center">
+    <div>
+      <span style="font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A6606;font-weight:600">Admissions</span>
+      <h1 style="font-family:Outfit,sans-serif;font-size:clamp(32px,4.6vw,48px);line-height:1.14;color:#123E7C;margin:14px 0 16px;letter-spacing:-0.02em;max-width:20ch;text-wrap:pretty">Start Your Admission Enquiry</h1>
+      <p style="font-size:18px;line-height:1.75;color:#4A5C53;margin:0 0 26px;max-width:58ch">Get in touch with Vidya Mitra Academy to find out about the programs available to you. Our team will talk through your options and explain what the admission process involves for the course you choose.</p>
+      <button type="button" onClick="{{ enquire }}" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16px;padding:15px 28px;border-radius:9px;box-shadow:0 8px 20px rgba(20,102,74,0.2)" style-hover="background:#123E7C">Enquire About Admission</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="Student completing admission paperwork with an advisor" style="height:280px;width:100%;border-radius:16px;object-fit:cover;border:1px solid #EEDFBA" />
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:76px 22px">
+  <h2 style="font-family:Outfit,sans-serif;font-size:clamp(26px,3.2vw,36px);color:#123E7C;margin:0 0 10px;letter-spacing:-0.01em">Admission Process</h2>
+  <p style="font-size:17px;color:#5A6B62;margin:0 0 40px;max-width:60ch;line-height:1.7">Four steps from first enquiry to enrolment.</p>
+  <div style="display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:28px;position:relative">
+      <span style="font-family:Outfit,sans-serif;font-size:44px;font-weight:700;color:#EFF6F1;line-height:1;display:block">01</span>
+      <h3 style="font-family:Outfit,sans-serif;font-size:19px;color:#123E7C;margin:10px 0 9px">Choose Your Course</h3>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#5A6B62">Look through the course categories and shortlist the programs that interest you.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:28px">
+      <span style="font-family:Outfit,sans-serif;font-size:44px;font-weight:700;color:#FBF3DE;line-height:1;display:block">02</span>
+      <h3 style="font-family:Outfit,sans-serif;font-size:19px;color:#123E7C;margin:10px 0 9px">Contact Our Team</h3>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#5A6B62">Send an enquiry or call us, and tell us what you have studied so far.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:28px">
+      <span style="font-family:Outfit,sans-serif;font-size:44px;font-weight:700;color:#EFF6F1;line-height:1;display:block">03</span>
+      <h3 style="font-family:Outfit,sans-serif;font-size:19px;color:#123E7C;margin:10px 0 9px">Understand Eligibility &amp; Requirements</h3>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#5A6B62">We explain what the program asks for and which documents you will need to prepare.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:28px">
+      <span style="font-family:Outfit,sans-serif;font-size:44px;font-weight:700;color:#FBF3DE;line-height:1;display:block">04</span>
+      <h3 style="font-family:Outfit,sans-serif;font-size:19px;color:#123E7C;margin:10px 0 9px">Complete the Admission Process</h3>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#5A6B62">Work through the formalities with our support until your place is confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F7FAF8;border-top:1px solid #EAF1EC;border-bottom:1px solid #EAF1EC">
+  <div style="max-width:1240px;margin:0 auto;padding:70px 22px;display:grid;gap:44px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center">
+    <div>
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(26px,3.2vw,34px);color:#123E7C;margin:0 0 16px;letter-spacing:-0.01em">Need Help Choosing a Course?</h2>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 16px">Choosing between streams and formats is often the hardest part. If you are unsure whether to take a regular or correspondence program, or which qualification your previous study leads into, speak to us before you decide.</p>
+      <p style="font-size:17px;line-height:1.8;color:#4A5C53;margin:0 0 26px">There is no obligation attached to an enquiry. Ask your questions, get a clear answer, then take your time.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <button type="button" onClick="{{ enquire }}" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16px;padding:14px 24px;border-radius:9px" style-hover="background:#123E7C">Enquire Now</button>
+        <a href="https://wa.me/918123274426" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#FFFFFF;border-radius:9px;padding:14px 24px;font-weight:600;font-size:16px" style-hover="background:#1EBE5B;color:#FFFFFF"><i class="fa-brands fa-whatsapp" style="font-size:18px"></i>Chat on WhatsApp</a>
+        <a href="Contact-Us.dc.html" style="border:1px solid #CFE6DA;background:#FFFFFF;border-radius:9px;padding:14px 24px;font-weight:600;font-size:16px">Contact Details</a>
+      </div>
+    </div>
+    <div style="display:grid;gap:16px">
+      <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start">
+        <i class="fa-solid fa-phone" style="color:#14664A;font-size:18px;margin-top:3px"></i>
+        <div><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:16px;display:block;margin-bottom:5px">Call the academy</strong><a href="tel:9910676270">9910676270</a>, <a href="tel:8123274426">8123274426</a></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:20px;margin-top:2px"></i>
+        <div><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:16px;display:block;margin-bottom:5px">Message on WhatsApp</strong><a href="https://wa.me/918123274426" target="_blank" rel="noopener">8123274426</a>, <a href="https://wa.me/919916067627" target="_blank" rel="noopener">9916067627</a></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E4EDE7;border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start">
+        <i class="fa-solid fa-envelope" style="color:#14664A;font-size:18px;margin-top:3px"></i>
+        <div><strong style="font-family:Outfit,sans-serif;color:#123E7C;font-size:16px;display:block;margin-bottom:5px">Email us</strong><a href="mailto:skbremedy@gmail.com">skbremedy@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,460px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { enquire: () => window.dispatchEvent(new CustomEvent('vma-open-enquiry')) };
+  }
+}
+</script>
+</body>
+</html>
