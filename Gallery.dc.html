@@ -48,11 +48,19 @@
 </section>
 
 <section style="background:#123E7C">
-  <div style="max-width:1000px;margin:0 auto;padding:62px 22px;text-align:center">
-    <h2 style="font-family:Outfit,sans-serif;font-size:clamp(26px,3.4vw,36px);color:#FFFFFF;margin:0 0 14px">Want to Join Us?</h2>
-    <p style="font-size:17px;line-height:1.7;color:#BFD0E8;margin:0 auto 28px;max-width:56ch">Send an enquiry and we will help you find the right program.</p>
-    <button type="button" onClick="{{ enquire }}" style="border:0;cursor:pointer;background:#F2B705;color:#3D2E00;font-weight:600;font-size:17px;padding:15px 30px;border-radius:9px" style-hover="background:#FFFFFF">Enquire Now</button>
+  <div style="max-width:1240px;margin:0 auto;padding:56px 22px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+    <div style="max-width:56ch">
+      <h2 style="font-family:Outfit,sans-serif;font-size:clamp(26px,3.4vw,36px);color:#FFFFFF;margin:0 0 12px">Want to Join Us?</h2>
+      <p style="font-size:17px;line-height:1.7;color:#BFD0E8;margin:0">Send an enquiry and we will help you find the right program.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;flex-shrink:0">
+      <button type="button" onClick="{{ enquire }}" style="border:0;cursor:pointer;background:#F2B705;color:#3D2E00;font-weight:600;font-size:17px;padding:15px 30px;border-radius:9px" style-hover="background:#FFFFFF">Enquire Now</button>
+      <a href="tel:9916067627" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;font-weight:600;font-size:17px;padding:15px 30px;border-radius:9px" style-hover="background:rgba(255,255,255,0.1);color:#FFFFFF"><i class="fa-solid fa-phone"></i>9916067627</a>
+    </div>
   </div>
+  <div style="height:56px"></div>
+  <div style="width:100%;height:4px;background:#FFFFFF"></div>
+  <div style="height:24px"></div>
 </section>
 
 <dc-import name="SiteFooter" hint-size="100%,460px"></dc-import>
