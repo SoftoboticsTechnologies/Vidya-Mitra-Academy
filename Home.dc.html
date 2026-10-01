@@ -242,6 +242,7 @@
         <textarea name="message" rows="4" placeholder="Tell us briefly about your education background" style="padding:12px 13px;border:1px solid #D8E6DE;border-radius:8px;font-size:15px;font-weight:400;background:#FFFFFF;color:#16211C;resize:vertical"></textarea>
       </label>
       <button type="submit" style="border:0;cursor:pointer;background:#14664A;color:#FFFFFF;font-weight:600;font-size:16px;padding:14px;border-radius:8px" style-hover="background:#123E7C">Submit Admission Enquiry</button>
+      <p data-status="data-status" aria-live="polite" style="margin:0;font-size:13.5px;color:#8A9A91;text-align:center"></p>
     </form>
   </div>
 </section>
@@ -275,12 +276,33 @@ class Component extends DCLogic {
     window.addEventListener('resize', this._r);
   }
   componentWillUnmount() { window.removeEventListener('resize', this._r); }
-  submit(e) {
+  async submit(e) {
     e.preventDefault();
     const f = e.target;
-    const g = (k) => (f.elements[k] && f.elements[k].value) || '';
-    const body = ['Name: ' + g('name'), 'Phone: ' + g('phone'), 'Email: ' + g('email'), 'Course Interested In: ' + g('course'), 'Preferred Learning Mode: ' + g('mode'), '', 'Message:', g('message')].join('\n');
-    window.location.href = 'mailto:skbremedy@gmail.com?subject=' + encodeURIComponent('Course enquiry from ' + (g('name') || 'website')) + '&body=' + encodeURIComponent(body);
+    const btn = f.querySelector('button[type="submit"]');
+    const status = f.querySelector('[data-status]');
+    const g = (k) => ((f.elements[k] && f.elements[k].value) || '').trim();
+    const show = (text, color) => { if (status) { status.textContent = text; status.style.color = color; } };
+    const data = { name: g('name'), phone: g('phone'), courseInterestedIn: g('course'), preferredLearningMode: g('mode'), message: g('message') };
+    if (g('email')) data.email = g('email');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    show('', '#8A9A91');
+    try {
+      const res = await fetch('https://k5iewetbri.execute-api.ap-south-1.amazonaws.com/prod/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      f.reset();
+      show('Thank you! Your enquiry has been sent. Our team will contact you soon.', '#14664A');
+    } catch (err) {
+      show('Sorry, your enquiry could not be sent. Please call or WhatsApp us on 9916067627.', '#B42318');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Submit Admission Enquiry';
+    }
   }
   renderVals() {
     const w = this.state.w;
